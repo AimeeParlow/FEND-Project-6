@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1><a href="/" tabindex="-1">Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+
+  <main id="maincontent" role="main">
+    <section id="map-container" tabindex="-1">
+      <div id="map" role="application" aria-hidden="true" aria-describedby="map-desc" tabindex="-1"></div>
+	  <div hidden id="map-desc">A map showing location of the chosen restaurants</div>
+    </section>
+    <section>
+      <div class="filter-options">
+        <h2>Filter Results</h2>
+        <select id="neighborhoods-select" role="combobox" aria-label="Select Neighborhoods" name="neighborhoods" onchange="updateRestaurants()">
+          <option value="all">All Neighborhoods</option>
+        </select>
+        <select id="cuisines-select" role="combobox" aria-label="Select Cuisines" name="cuisines" onchange="updateRestaurants()">
+          <option value="all">All Cuisines</option>
+        </select>
+      </div>
+      <ul id="restaurants-list"></ul>
+    </section>
+  </main>
+
+  <!-- Beginning scripts -->
+  <!-- Database helpers -->
+  <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+  <!-- Main javascript file -->
+  <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+  <!-- Google Maps -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4AP8-J1NH8iZ6wdlXXxBoNsdoyBV1MP4&libraries=places&callback=initMap"></script>
+  <!--Service Worker-->
+  <script type="application/javascript" charset="utf-8" src="js/registration_sw.js"></script>
+  <!-- End scripts -->
+  
+  <footer id="footer" role="contentinfo">
+    Copyright (c) 2017 <span class="br"><a href="/"><strong>Restaurant Reviews</strong></a></span>
+    <span class="br">All Rights Reserved.</span>
+  </footer>
+
+</body>
+
+</html>
