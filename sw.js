@@ -32,9 +32,7 @@ self.addEventListener('install', function(event) {
 	);
 });
 
-
-
-//Fetch or return cached data
+//Fetch cached data
 self.addEventListener('fetch', function(fetchEvent) {
 	console.log('fetching');
 	fetchEvent.respondWith(
@@ -50,7 +48,6 @@ self.addEventListener('fetch', function(fetchEvent) {
 		})
 	);
 })
-
 
 //delete old cache
 self.addEventListener('activate', function(activateEvent) {
