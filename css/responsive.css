@@ -17,9 +17,6 @@
     font-size: 14pt;
     letter-spacing: 5px;
     }
-  .filter-options {
-    padding: 15px 0 60px 10px;
-  }
   #map {
     height: 300px;
     }
@@ -112,7 +109,6 @@
 .inside #footer {
   width: 95%;
   letter-spacing: 0.5px;
-  padding: 10px 110px 10px 10px;
   }
 }
 
